@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    background-color: #fff;
+    padding: 15px;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container img{
+    width: 60px;
+    height: 24px;
+}
+
+.links{
+    position: relative;
+
+}
+
+.links:hover{ .menu{
+    display: block;
+}
+}
+.links:hover .icon span:nth-child(2){
+    width: 100%;
+}
+
+.links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.links .icon:hover span:nth-child(2){
+    width: 100%;
+}
+
+.links .icon span{
+    background: #000;
+    height: 3px;
+    transition: 0.5s;
+}
+.links .icon span:first-child{
+    width: 100%; 
+}
+
+.links .icon span:nth-child(2){
+    width: 60%;
+    margin-top: 5px;
+}
+
+.links .icon span:last-child{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.menu{
+    position: absolute;
+    background: #f1f1f1;
+    width: 150px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    transition: 0.5s;
+    display: none;
+    /* top: calc(100% + 15px); */
+    margin-top: 15px;
+    z-index: 1;
+}
+.links:hover .menu{
+    display: block;
+}
+
+.menu::before{
+    content: "";
+    border-width:10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(197, 197, 197) transparent;
+    position: absolute;
+    right: 5px;
+    top:-19px;
+}
+
+.menu li{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.menu li:not(:last-child){
+    border-bottom: solid 1px black;
+}
+.menu li a{
+    text-decoration: none;
+    color : black;
+    transition: 0.5s;
+}
+
+.menu li:hover a{
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+/* welcome section */
+
+.welcome{
+    background-image: url('../images/landing.jpg');
+    background-size: cover;
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+}
+
+.hello{
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+}
+.hello h1{
+    color: #10cab7;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hello p{
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+/* end welcome section */
+
+/* cards section */
+.cards{
+    background-color: #f1f1f1;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.cards .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+}
+.cards .container .card{
+    text-align: center;
+    padding: 20px;
+}
+.cards .container .card i{
+    color: #10cab7;
+    padding-bottom: 10px;
+}
+
+.cards .container .card h2{
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cards .container .card p{
+    font-size: 17px;
+    color: #707070;
+    line-height: 1.8;
+}
+
+/* end cards section */
+
+/* sevices section */
+.special-heading h1{
+    text-align: center;
+    font-size: 100px;
+    color: #d3d1d1;
+    font-weight: bold;
+    margin: 0;
+}
+.special-heading p{
+    text-align: center;
+    margin-top: -30px;
+    color: rgb(-12 18 0);
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+@media screen {
+    
+}
+.services .container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .container .services2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.col{
+    padding: 10px;
+}
+.srv{
+    display: flex;
+}
+
+.srv i{
+    padding: 20px;
+    color: #10cab7;
+}
+
+.srv .text{
+    padding: 15px;
+}
+
+.srv .text h2{
+    padding-bottom: 20px;
+}
+
+.srv .text p{
+    line-height: 1.4;
+}
+
+.col img{
+    width: 95%;
+    height: 78%;
+}
+/* end services section */
+
+/*  portfolio section */
+
+.portfolio{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f1f1f1;
+}
+.portfolio .container .projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    column-gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.portfolio .container .projects .project{
+    background-color: #fff;
+}
+.portfolio .container .projects .project img{
+    width: 100%;
+    height: 256px;
+}
+
+.portfolio .container .projects .project h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+
+.portfolio .container .projects .project p{
+    font-size: 17px;
+    color: #707070;
+    line-height: 1.8;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+/* end portfolio section */
+
+
+/* About section */
+
+.about{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.about .container .about-content{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .container .about-content .image{
+    width: 25%;
+    height: 360px;
+}
+.about .container .about-content .image img{
+    width: 100%;
+    height: 100%;
+}
+.about .container .about-content .text{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}  
+.about .container .about-content .text p:first-child{
+    line-height: 1.6;
+    font-weight: bold;
+}
+.about .container .about-content .text hr{
+    width: 50%;
+    height: 1px;
+    color: #10cab7;
+    background-color: #10cab7;
+}
+.about .container .about-content .text p:last-child{
+    line-height: 1.6;
+    color: #8b8b8b;
+}
+
+/* end about section */
+
+
+/* contact section */
+
+.contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f1f1f1;
+}
+
+.contact .container .contact-content{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact .container .contact-content h3{
+    font-size: 27px;
+    font-weight: bold;
+}
+.contact .container .contact-content p:first-of-type{
+    margin: 15px 0;
+    font-size: 27px;
+    color: #10cab7;
+    font-weight: 800;
+}
+
+.contact .container .contact-content p:last-of-type{
+    font-size:18px
+}
+
+.contact .container .contact-content p i{
+    margin-left: 5px;
+}
+
+
+
+/* end contact section */
+
+
+/* footer */
+
+footer{
+    text-align: center;
+    padding: 28px;
+    background-color: rgb(45, 45, 83);
+    color: white;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-weight: bold;
+}
+
+footer span{
+    color:#10cab7
+}
+
+/* end footer */
